@@ -191,6 +191,7 @@ int main() {
             cout << "Request routed to: " << destination->ipAddress << "\n";
 
             // Simulate request completion (in real life, this would happen asynchronously)
+            destination->acceptRequest(request);
             destination->completeRequest();
         } catch (const exception& e) {
             cout << "Error: " << e.what() << "\n";
